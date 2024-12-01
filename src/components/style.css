@@ -1,0 +1,11 @@
+.icon {
+    height: 100px;
+    width: 100px;
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .icon {
+      height: 20px;
+    width: 20px;
+    }
+  }

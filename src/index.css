@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "TacticSans-Blk";
+  src: url('/fonts/TacticSans-Blk.otf');
+}
+
+@font-face {
+  font-family: "Altone-Reg";
+  src: url('/fonts/Altone Trial-Regular.ttf');
+}

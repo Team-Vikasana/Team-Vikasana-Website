@@ -42,8 +42,7 @@ const FirstPage = () => {
           <div className="vision">
             <h3>Vision</h3>
             <p>
-            "To inspire a community of tech enthusiasts driven to innovate, collaborate, and develop future-ready skills for real-world challenges."
-            </p>
+            "To inspire a community of tech enthusiasts driven to innovate, collaborate, and develop future-ready skills for real-world challenges. We strive to create a culture of continuous learning and exploration, empowering students."            </p>
           </div>
 
           <div className="mission">

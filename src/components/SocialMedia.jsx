@@ -10,7 +10,7 @@ const SocialMedia = () => {
             <br></br> innovations, projects, and events at <i>Vikasana!</i>.</p>
         </div>
         <div className='grid grid-rows-4 sm:grid-cols-4 sm:grid-rows-2 gap-[16px] m-[21px] sm:m-[42px]'>
-        <div className='row-span-2 col-span-2 border border-[rgba(255,255,255,0.3)] rounded-[20.69px] bg-[#1c1b1b]'><img src="./../../public/images/insta.png" className='opacity-50 object-cover w-full h-full' alt="insta" /></div>
+        <div className='row-span-2 col-span-2 border border-[rgba(255,255,255,0.3)] rounded-[20.69px] bg-[#1c1b1b]'><img src="/images/insta.png" className='opacity-50 object-cover w-full h-full' alt="insta" /></div>
     <div className='border border-[rgba(255,255,255,0.3)] rounded-[20.69px] bg-[#141414] flex justify-center items-center  flex-col'>
         <Linkedin className='icon'/>
         <span className='text-[10px] sm:text-[30px]'>@Vikasana</span>

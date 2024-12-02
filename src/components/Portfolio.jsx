@@ -1,8 +1,9 @@
+import React from "react";
 import PortfolioCard from "./PortfolioCard";
 
-const eventlist = new Array(7).fill({imageUrl: "/images/logo.svg"});
-const workshoplist = new Array(7).fill({imageUrl: "/images/logo.svg"});
-const projectlist = new Array(7).fill({imageUrl: "/images/logo.svg"});
+const eventlist = new Array(7).fill({imageUrl: "/images/VikasanaLogo.svg"});
+const workshoplist = new Array(7).fill({imageUrl: "/images/VikasanaLogo.svg"});
+const projectlist = new Array(7).fill({imageUrl: "/images/VikasanaLogo.svg"});
 
 const Events = () => {
     return (

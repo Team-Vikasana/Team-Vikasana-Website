@@ -13,7 +13,7 @@ const HeroPage = () => {
                     <p className="w-fit text-4xl md:text-6xl font-tacticsans">THE INNOVATION HUB FOR BREAKTHROUGH IDEAS.</p>
                     <p className="w-full text-2xl text-[#DADADA]">Empowering students and faculty to turn ideas into impact with cutting-edge research and applications.</p>
                     <div className="flex pt-4">
-                        <button className="px-8 py-2 rounded-xl submit-gradient font-semibold">Contact Us</button>
+                        <button className="px-8 py-2 rounded-xl submit-gradient font-semibold"><span className="relative">Contact Us</span></button>
                     </div>
                 </div>
                 <SplineElement />

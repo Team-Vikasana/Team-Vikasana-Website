@@ -7,7 +7,7 @@
   
   .app {
     position: relative;
-    height: 100vh; /* Full height of the viewport */
+    height: fit-content;
     width: 100%;   /* Full width of the viewport */
     background: url('./images/About-Vikasana.svg');
     background-size: cover;  /* Ensure the background image covers the entire element */
@@ -101,10 +101,10 @@
   /* Keyframe animation for blinking effect */
  
   @keyframes blink {
-    0%, 100% {
+    0%, 50% {
       color: white; /* Filled white */
     }
-    50% {
+    51%, 100% {
       color: transparent; /* Transparent with border only */
     }
   }

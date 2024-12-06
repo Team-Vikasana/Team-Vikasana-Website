@@ -5,9 +5,9 @@ import SplineElement from "./SplineElement";
 const HeroPage = () => {
     return (
         <>
-        <section className="bg-black w-screen min-h-screen h-fit overflow-hidden text-white z-0">
+        <section className="bg-black w-screen h-fit overflow-hidden text-white z-0">
             <NavBar />
-            <div className="relative">
+            <div className="relative mb-40 md:m-0">
                 <div className="relative z-20 w-full md:w-2/3 h-fit py-8 px-8 md:px-16  flex flex-col space-y-6 text-left font-altone text-wrap justify-between">
                     <p className="w-fit font-extrabold text-xl text-transparent bg-clip-text bg-gradient-to-r from-[#48E9F8] to-white"># The Research and Innovation Unit of Presidency.</p>
                     <p className="w-fit text-4xl md:text-6xl font-tacticsans">THE INNOVATION HUB FOR BREAKTHROUGH IDEAS.</p>

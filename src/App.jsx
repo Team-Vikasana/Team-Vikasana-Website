@@ -9,16 +9,16 @@ import HeroPage from "./components/HeroPage.jsx";
 
 const App = () => {
   return (
-    <div className="h-screen w-screen no-scrollbar overflow-y-scroll">
-      <HeroPage />
-      <FirstPage />
-      <Portfolio />
-      <SocialMedia />
-      <Divisions />
-      <TeamsHeaderComp />
-      <TeamsComp />
-      <Contact />
-    </div>
+      <div className="h-screen w-screen no-scrollbar overflow-y-scroll scroll-smooth">
+          <HeroPage />
+          <FirstPage />
+          <Portfolio />
+          <SocialMedia />
+          <Divisions />
+          <TeamsHeaderComp />
+          <TeamsComp />
+          <Contact />
+      </div>
   );
 }
 

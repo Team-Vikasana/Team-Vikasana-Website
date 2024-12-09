@@ -62,22 +62,22 @@
     font-family:'Tacticsans-blk', sans-serif;
     font-weight: bold;
     color: white;
-  text-align: center;
-  line-height: 1.2;
+    text-align: center;
+    line-height: 1.2;
   }
 
   .header h2 span {
     display: inline-block;
-    -webkit-text-stroke: 0.2px #00FFFF; /* Blue border around text */
-    text-stroke: 0.2px #00FFFF; /* Fallback for non-Webkit browsers */
+    -webkit-text-stroke: 1px #00FFFF; /* Blue border around text */
+    text-stroke: 1px #00FFFF; /* Fallback for non-Webkit browsers */
     color: white; /* White fill inside the letters */
     padding: 0 5px;
   }
   
   .header h2 .curiosity {
     color: white;
-    -webkit-text-stroke: 0.2px #00FFFF;
-    text-stroke: 0.2px #00FFFF;
+    -webkit-text-stroke: 1px #00FFFF;
+    text-stroke: 1px #00FFFF;
     animation: blink 1s infinite;
   }
   
@@ -88,14 +88,14 @@
   
   .header h2 .creation {
     color: transparent;
-    -webkit-text-stroke: 0.2px #00FFFF;
-    text-stroke: 0.2px #00FFFF;
+    -webkit-text-stroke: 1px #00FFFF;
+    text-stroke: 1px #00FFFF;
   }
   
   .header h2 .full-stop {
     color: transparent;
-    -webkit-text-stroke: 0.2px #00FFFF;
-    text-stroke: 0.2px #00FFFF;
+    -webkit-text-stroke: 1px #00FFFF;
+    text-stroke: 1px #00FFFF;
   }
   
   /* Keyframe animation for blinking effect */

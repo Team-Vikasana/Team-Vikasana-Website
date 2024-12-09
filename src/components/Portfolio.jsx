@@ -85,8 +85,13 @@ const Projects = () => {
 
 const Portfolio = () => {
     return (
-        <section className="bg-black min-w-screen min-h-screen h-fit py-20 text-white text-center flex flex-col items-center space-y-10">
-            <p className="font-tacticsans pb-16 text-5xl sm:text-6xl md:text-7xl text-white/80">OUR PORTFOLIO</p>
+        <section
+            id="portfolio"
+            className="bg-black min-w-screen min-h-screen h-fit py-20 text-white text-center flex flex-col items-center space-y-10"
+        >
+            <p className="font-tacticsans pb-16 text-5xl sm:text-6xl md:text-7xl text-white/80">
+                OUR PORTFOLIO
+            </p>
             <Events />
             <Workshops />
             <Projects />

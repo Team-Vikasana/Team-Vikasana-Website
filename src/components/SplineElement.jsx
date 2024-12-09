@@ -79,47 +79,67 @@
 
 
 import React, { useState, useEffect, useRef, Suspense } from 'react';
+import ErrorBoundary from "./ErrorBoundary";
 
-const LazySpline = React.lazy(() => import('@splinetool/react-spline'));
+const LazySpline = React.lazy(() => import("@splinetool/react-spline"));
 
 export default function SplineElement() {
-  const [isVisible, setIsVisible] = useState(false);  
-  const splineRef = useRef(null);  
+    const [isVisible, setIsVisible] = useState(false);
+    const [hasLoaded, setHasLoaded] = useState(false);
+    const splineRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
-      {
-        threshold: 0.1, // Trigger when at least 10% of the element is in view
-      }
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    if (!hasLoaded) {
+                        setIsVisible(true);
+                        setHasLoaded(true);
+                    } else {
+                        setIsVisible(true);
+                    }
+                } else {
+                    setIsVisible(false);
+                }
+            },
+            {
+                threshold: 0.1, // Trigger when at least 10% of the element is in view
+            }
+        );
+
+        if (splineRef.current) {
+            observer.observe(splineRef.current);
+        }
+
+        return () => {
+            if (splineRef.current) {
+                observer.unobserve(splineRef.current);
+            }
+        };
+    }, [hasLoaded]);
+
+    return (
+        <div
+            ref={splineRef}
+            className="w-full h-full absolute -bottom-1/2 md:bottom-0 -right-1/4"
+        >
+            {/* Only render LazySpline when visible */}
+            {isVisible && (
+                <Suspense
+                    fallback={
+                        <div className="bg-slate-950 md:translate-x-[130%] w-fit text-white rounded-2xl p-4 h-full text-wrap content-center animate-pulse">
+                            Uh oh, Please wait... Maybe the servers are
+                            sleeping!!!
+                        </div>
+                    }
+                >
+                    <ErrorBoundary>
+                        <LazySpline scene="https://prod.spline.design/hb0QtAjyTpSxVSpn/scene.splinecode" />
+                    </ErrorBoundary>
+                </Suspense>
+            )}
+        </div>
     );
-
-    if (splineRef.current) {
-      observer.observe(splineRef.current);
-    }
-
-    return () => {
-      if (splineRef.current) {
-        observer.unobserve(splineRef.current);
-      }
-    };
-  }, []);
-
-  return (
-    <div
-      ref={splineRef}
-      className="w-full h-full absolute -bottom-1/2 md:bottom-0 -right-1/4"
-    >
-      {/* Only render LazySpline when visible */}
-      {isVisible && (
-        <Suspense fallback={<div>Loading...</div>}>
-          <LazySpline scene="https://prod.spline.design/hb0QtAjyTpSxVSpn/scene.splinecode" />
-        </Suspense>
-      )}
-    </div>
-  );
 }
 
 

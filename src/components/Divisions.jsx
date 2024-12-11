@@ -52,16 +52,27 @@ const Teams = () => {
 };
 
 const DivCard = ({ title, subtitle, desc, link, color, img }) => {
+
+    const renderTitle = (title) => {
+        const parts = title.split(/(\d+)/);
+        return parts.map((part, index) => (
+            <span key={index} className={/\d/.test(part) ? "font-poppins font-bold" : ""}>
+                {part}
+            </span>
+        ));
+    };
+
     return (
         <>
             <div className="bg-white snap-center sm:snap-start snap-always relative shrink-0 h-fit w-fit object-contain rounded-2xl left-0">
                 <div
-                    className={` absolute left-0 right-0 rounded-xl w-full h-full flex items-center text-left font-altone text-[#1E1E1E] bg-gradient-to-b from-white via-white to-[${color}] opacity-0 hover:opacity-100 transition-opacity duration-300`}
+                    className={` absolute left-0 right-0 rounded-xl w-full h-full flex items-center text-left font-altone text-[#1E1E1E] opacity-0 hover:opacity-100 transition-opacity duration-300`}
+                    style={{ background: `linear-gradient(to bottom, white, white, ${color})` }}
                 >
                     <div className="mx-4">
                         <div className="pb-14 px-2">
                             <p className="font-extrabold text-2xl pb-1">
-                                {title}
+                                {renderTitle(title)}
                             </p>
                             <p className="text-sm">{subtitle}</p>
                         </div>

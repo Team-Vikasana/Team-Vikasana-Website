@@ -79,10 +79,12 @@ const Contact = () => {
                                     </p>
                                 </a>
                             </div>
-                            <img
+                            <a href="#home">
+                                <img
                                 src="/images/VikasanaLogo.svg"
                                 className="h-16 -ml-5"
-                            />
+                                />
+                            </a>
                         </div>
                     </div>
 

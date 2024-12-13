@@ -10,6 +10,7 @@ export default {
         tacticsans: ['"TacticSans-Blk"', 'sans-serif'],
         altone: ['"Altone-Reg"', 'sans-serif'],
         poppins: ['"Poppins"', 'sans-serif'],
+        monument: ['"MonumentExtended"', 'sans-serif'],
       },
       animation: {
         "loop-scroll": "loop-scroll 100s linear infinite",

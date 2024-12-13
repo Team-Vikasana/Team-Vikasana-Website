@@ -6,7 +6,10 @@ const NavBar = () => {
 
     return (
         <div className="max-sm:flex lg:flex py-8 px-8 md:px-16 items-center justify-between bg-black font-altone font-extralight relative">
-            <img src="/images/VikLogo.svg" className="h-16 shrink-0" />
+            <div className="flex items-center select-none">
+                <img src="/images/Creative Color Brushstroke Lettering Logo 1.svg" className="h-16 shrink-0" />
+                <p className="text-white font-monument text-4xl">VIKASANA</p>
+            </div>
             <nav
                 className={`flex max-sm:flex-col max-sm:absolute max-sm:p-5 rounded-sm z-40 right-2 -bottom-[180%] bg-black items-center text-xl max-sm:space-y-2 space-x-[3vw] overflow-x-auto custom-scrollbar ${
                     !toggleMenu

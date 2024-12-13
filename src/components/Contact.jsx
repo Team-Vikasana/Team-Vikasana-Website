@@ -79,11 +79,18 @@ const Contact = () => {
                                     </p>
                                 </a>
                             </div>
-                            <a href="#home">
+                            <a href="#home" className="flex items-center">
                                 <img
-                                src="/images/VikasanaLogo.svg"
-                                className="h-16 -ml-5"
+                                    src="/images/VikasanaIcon.svg"
+                                    className="h-16 -ml-5"
                                 />
+                                <p className="font-monument text-3xl">
+                                    VIKASANA
+                                    <br />
+                                    <span className="font-altone text-sm line-clamp-none">
+                                        Where Curiosity Meets Creativity
+                                    </span>
+                                </p>
                             </a>
                         </div>
                     </div>

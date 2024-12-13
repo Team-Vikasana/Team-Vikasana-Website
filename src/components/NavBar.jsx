@@ -5,10 +5,10 @@ const NavBar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
 
     return (
-        <div className="max-sm:flex lg:flex py-8 px-8 md:px-16 items-center justify-between bg-black font-altone font-extralight relative">
+        <div className="max-sm:flex lg:flex py-8 px-8 md:px-16 items-center justify-between bg-black font-altone font-extralight relative z-50">
             <div className="flex items-center select-none">
-                <img src="/images/Creative Color Brushstroke Lettering Logo 1.svg" className="h-16 shrink-0" />
-                <p className="text-white font-monument text-4xl">VIKASANA</p>
+                <img src="/images/VikasanaIcon.svg" className="h-16 shrink-0" />
+                <p className="text-white font-monument text-3xl">VIKASANA</p>
             </div>
             <nav
                 className={`flex max-sm:flex-col max-sm:absolute max-sm:p-5 rounded-sm z-40 right-2 -bottom-[180%] bg-black items-center text-xl max-sm:space-y-2 space-x-[3vw] overflow-x-auto custom-scrollbar ${

@@ -121,7 +121,7 @@ export default function SplineElement() {
     return (
         <div
             ref={splineRef}
-            className="w-full h-full absolute -bottom-1/2 md:bottom-0 -right-1/4"
+            className="w-full h-full absolute -bottom-1/2 md:bottom-0 -right-1/4 z-10"
         >
             {/* Only render LazySpline when visible */}
             {isVisible && (

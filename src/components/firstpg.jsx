@@ -53,14 +53,11 @@ const FirstPage = () => {
               <div className="footer font-altone">
                   <div className="logo">
                       {/* <img src="/images/logo.svg" alt="Logo" /> */}
-                      <img
-                          src="/images/Creative Color Brushstroke Lettering Logo 1.svg"
-                          alt="logo1"
-                      />
+                      <img src="/images/VikasanaIcon.svg" alt="logo1" />
                   </div>
-                  <div className='w-full'>
-                    <p>Incubated at Presidency Launchpad</p>
-                    <p>Formed at Presidency University</p>
+                  <div className="w-full">
+                      <p>Incubated at Presidency Launchpad</p>
+                      <p>Formed at Presidency University</p>
                   </div>
               </div>
           </div>

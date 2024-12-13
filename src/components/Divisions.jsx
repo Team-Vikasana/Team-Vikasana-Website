@@ -95,7 +95,7 @@ const Divisions = () => {
         <>
             <section
                 id="division"
-                className="bg-black min-w-screen min-h-screen h-fit py-20 text-white text-center flex flex-col items-center space-y-10"
+                className="bg-black w-screen min-h-[70vh] h-fit py-20 text-white text-center flex flex-col items-center space-y-10"
             >
                 <div className="font-altone text-[#afafaf] text-xl md:text-2xl">
                     <p className="font-tacticsans text-3xl md:text-4xl text-white">

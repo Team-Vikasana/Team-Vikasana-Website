@@ -131,11 +131,16 @@
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
-    
+    column-gap: 10px;
+    margin-inline: -2.3rem;
   }
   
   .vision, .mission {
     width: 45%;
+    @media (max-width: 640px) {
+      width: 50%;
+      text-align: center;      
+    }
   }
   
   .vision h3, .mission h3 {

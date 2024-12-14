@@ -3,7 +3,7 @@ import React from "react";
 export default function FoundingMembersCard({ src, name, title, division, linkedin, github }) {
 	return (
         <div>
-            <div className="w-[300px] h-[300px] rounded-[20px] border border-white relative group">
+            <div className="w-[250px] h-[300px] rounded-[20px] border border-white relative group">
                 <img
                     src={src}
                     className="w-full h-full object-cover rounded-[inherit]"

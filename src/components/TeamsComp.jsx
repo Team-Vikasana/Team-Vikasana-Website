@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { LaptopMinimal,Satellite,Podcast,GlobeLock,Bot } from 'lucide-react';
 import MembersVayuvega from './MembersVayuvega';
 export default function TeamsComp() {
 
@@ -10,10 +9,11 @@ export default function TeamsComp() {
     }
 
   return (
-      <div className="flex flex-col items-center w-full bg-black">
-          <div className="w-full grid grid-cols-2 grid-rows-3 sm:grid-cols-8 sm:grid-rows-1 gap-[20px] content-center px-10 sm:px-[100px] text-[#9f5efa] text-[30px] font-altone font-bold">
+      <div className="flex flex-col items-center w-full pb-10 bg-black">
+          <div className="w-full flex justify-around flex-wrap items-center gap-y-2 px-10 sm:px-0 text-[#9f5efa] text-[30px] font-altone font-bold">
+          {/* <div className="w-full grid grid-cols-2 grid-rows-3 sm:grid-cols-8 sm:grid-rows-1 gap-[20px] content-center px-10 sm:px-[100px] text-[#9f5efa] text-[30px] font-altone font-bold"> */}
               <div
-                  className={`py-[7px] width-full flex justify-center items-center border-2 border-white rounded-[15px] ${
+                  className={`py-[7px] w-40 flex justify-center items-center cursor-pointer border-2 border-white rounded-[15px] ${
                       toggleState === 1 ? "bg-white" : "bg-black"
                   }`}
                   onClick={() => {
@@ -23,7 +23,7 @@ export default function TeamsComp() {
                   <b>All</b>
               </div>
               <div
-                  className={`py-[7px] width-full flex justify-center items-center border-2 border-white rounded-[15px] ${
+                  className={`py-[7px] w-40 flex justify-center items-center cursor-pointer border-2 border-white rounded-[15px] ${
                       toggleState === 2 ? "bg-white" : "bg-black"
                   }`}
                   onClick={() => {
@@ -33,7 +33,7 @@ export default function TeamsComp() {
                   <b>Vayuvega</b>
               </div>
               <div
-                  className={`py-[7px] width-full flex justify-center items-center border-2 border-white rounded-[15px] ${
+                  className={`py-[7px] w-40 flex justify-center items-center cursor-pointer border-2 border-white rounded-[15px] ${
                       toggleState === 3 ? "bg-white" : "bg-black"
                   }`}
                   onClick={() => {
@@ -43,7 +43,7 @@ export default function TeamsComp() {
                   <b>Research</b>
               </div>
               <div
-                  className={`py-[7px] width-full flex justify-center items-center border-2 border-white rounded-[15px] ${
+                  className={`py-[7px] w-40 flex justify-center items-center cursor-pointer border-2 border-white rounded-[15px] ${
                       toggleState === 4 ? "bg-white" : "bg-black"
                   }`}
                   onClick={() => {
@@ -57,7 +57,7 @@ export default function TeamsComp() {
                   </b>
               </div>
               <div
-                  className={`py-[7px] width-full flex justify-center items-center border-2 border-white rounded-[15px] ${
+                  className={`py-[7px] w-40 flex justify-center items-center cursor-pointer border-2 border-white rounded-[15px] ${
                       toggleState === 5 ? "bg-white" : "bg-black"
                   }`}
                   onClick={() => {
@@ -67,7 +67,7 @@ export default function TeamsComp() {
                   <b>Robotics</b>
               </div>
               <div
-                  className={`py-[7px] width-full flex justify-center items-center border-2 border-white rounded-[15px] ${
+                  className={`py-[7px] w-40 flex justify-center items-center cursor-pointer border-2 border-white rounded-[15px] ${
                       toggleState === 6 ? "bg-white" : "bg-black"
                   }`}
                   onClick={() => {
@@ -77,7 +77,7 @@ export default function TeamsComp() {
                   <b>Onyx</b>
               </div>
               <div
-                  className={`py-[7px] width-full flex justify-center items-center border-2 border-white rounded-[15px] ${
+                  className={`py-[7px] w-40 flex justify-center items-center cursor-pointer border-2 border-white rounded-[15px] ${
                       toggleState === 7 ? "bg-white" : "bg-black"
                   }`}
                   onClick={() => {
@@ -87,7 +87,7 @@ export default function TeamsComp() {
                   <b>OG</b>
               </div>
               <div
-                  className={`py-[7px] width-full flex justify-center items-center border-2 border-white rounded-[15px] ${
+                  className={`py-[7px] w-40 flex justify-center items-center cursor-pointer border-2 border-white rounded-[15px] ${
                       toggleState === 8 ? "bg-white" : "bg-black"
                   }`}
                   onClick={() => {

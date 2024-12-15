@@ -9,7 +9,7 @@ const SocialMedia = () => {
         >
             <div className="flex items-center flex-col">
                 <h1 className="font-tacticsans text-[45px] sm:text-[75px]">
-                    SOICAL MEDIA
+                    SOCIAL MEDIA
                 </h1>
                 <p className="text-[#AFAFAF] text-[20px] sm:text-[35px] text-center">
                     Check out our social media handles to stay updated on the

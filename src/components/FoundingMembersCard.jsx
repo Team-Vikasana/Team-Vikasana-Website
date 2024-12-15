@@ -5,7 +5,7 @@ export default function FoundingMembersCard({ src, name, title, linkedin, github
         <div>
             <div className="w-[250px] h-[300px] rounded-[20px] border border-white relative group">
                 <img
-                    lazy="true"
+                    loading="lazy"
                     src={src}
                     className="w-full h-full object-cover rounded-[inherit]"
                 />

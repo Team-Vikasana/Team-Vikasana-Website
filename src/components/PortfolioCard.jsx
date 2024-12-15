@@ -9,7 +9,7 @@ const PortfolioCard = ({ imageUrl, link }) => {
             <img
                 loading="lazy"
                 src={imageUrl}
-                className="w-full h-full mx-auto object-fill"
+                className="w-full h-full mx-auto object-cover object-center rounded-[inherit]"
                 alt="Event image"
             />
         </a>

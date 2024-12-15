@@ -1,19 +1,77 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import MembersVayuvega from './MembersVayuvega';
-import {
-    HexaMembers,
-    ImagineXMembers,
-    OnyxMembers,
-    ResearchAndDevMembers,
-    RoboticsMembers,
-    VayuvegaMembers,
-} from "../assets/membersList";
+import supabase from "../utils/supabase"
+
+
 export default function TeamsComp() {
     const [toggleState, setToggleState] = useState(1);
+    const [onyx_members, setOnyx_members] = useState([]);
+    const [hexa_members, setHexa_members] = useState([]);
+    const [imaginex_members, setImaginex_members] = useState([]);
+    const [vayu_members, setVayu_members] = useState([]);
+    const [robo_members, setRobo_members] = useState([]);
+    const [rnd_members, setRnd_members] = useState([]);
 
     const toggleTab = (index) => {
         setToggleState(index);
     };
+
+    useEffect(()=>{
+        async function fetchData() {
+            try{
+                let { data: onyxData, error:onyxError } = await supabase
+                .from('onyx_members')
+                .select('*')
+                if(onyxError) throw onyxError;
+                setOnyx_members(onyxData);
+                
+
+                let { data: hexaData, error:hexaError } = await supabase
+                .from('hexa_members')
+                .select('*')
+                if(hexaError) throw hexaError;
+                setHexa_members(hexaData);
+                
+
+                let { data: roboData, error:roboError } = await supabase
+                .from('robotics_members')
+                .select('*')
+                if(roboError) throw roboError;
+                setRobo_members(roboData);
+                
+
+                let { data: vayuData, error:vayuError } = await supabase
+                .from('vaayuvega_members')
+                .select('*')
+                if(vayuError) throw vayuError;
+                setVayu_members(vayuData);
+                
+
+                let { data: imaginexData, error:imaginexError } = await supabase
+                .from('imaginex_members')
+                .select('*')
+                if(imaginexError) throw imaginexError;
+                setImaginex_members(imaginexData);
+                
+
+                let { data: rndData, error:rndError } = await supabase
+                .from('research_and_dev_members')
+                .select('*')
+                if(rndError) throw rndError;
+                setRnd_members(rndData);
+                
+
+            }
+            catch(error) {
+                console.error("Error fetching details:", error);
+            }
+            
+            
+        }
+        fetchData();
+    },[]);
+
+
 
     return (
         <div className="flex flex-col items-center w-full pb-10 bg-black">
@@ -105,14 +163,16 @@ export default function TeamsComp() {
                     <b>ImagineX</b>
                 </div>
             </div>
+
+            <div className='px-10'>
             <div className={` ${toggleState === 1 ? "flex" : "hidden"}`}>
                 <MembersVayuvega
-                    team={OnyxMembers.concat(
-                        VayuvegaMembers,
-                        ResearchAndDevMembers,
-                        HexaMembers,
-                        RoboticsMembers,
-                        ImagineXMembers
+                    team={hexa_members.concat(
+                        onyx_members,
+                        vayu_members,
+                        imaginex_members,
+                        rnd_members,
+                        robo_members
                     )}
                 />
             </div>
@@ -121,49 +181,50 @@ export default function TeamsComp() {
                     toggleState === 2 ? "flex" : "hidden"
                 }`}
             >
-                <MembersVayuvega team={VayuvegaMembers} />
+                <MembersVayuvega team={vayu_members} />
             </div>
             <div
                 className={`items-center justify-center ${
                     toggleState === 3 ? "flex" : "hidden"
                 }`}
             >
-                <MembersVayuvega team={ResearchAndDevMembers} />
+                <MembersVayuvega team={rnd_members} />
             </div>
             <div
                 className={`items-center justify-center ${
                     toggleState === 4 ? "flex" : "hidden"
                 }`}
             >
-                <MembersVayuvega team={HexaMembers} />
+                <MembersVayuvega team={hexa_members} />
             </div>
             <div
                 className={`items-center justify-center ${
                     toggleState === 5 ? "flex" : "hidden"
                 }`}
             >
-                <MembersVayuvega team={RoboticsMembers} />
+                <MembersVayuvega team={robo_members} />
             </div>
             <div
                 className={`items-center justify-center ${
                     toggleState === 6 ? "flex" : "hidden"
                 }`}
             >
-                <MembersVayuvega team={OnyxMembers} />
+                <MembersVayuvega team={onyx_members} />
             </div>
             <div
                 className={`items-center justify-center ${
                     toggleState === 7 ? "flex" : "hidden"
                 }`}
-            >
-                <MembersVayuvega team={OnyxMembers} />
+                >
+                <MembersVayuvega team={onyx_members} />
             </div>
             <div
                 className={`items-center justify-center ${
                     toggleState === 8 ? "flex" : "hidden"
                 }`}
-            >
-                <MembersVayuvega team={ImagineXMembers} />
+                >
+                <MembersVayuvega team={imaginex_members} />
+            </div>
             </div>
         </div>
     );

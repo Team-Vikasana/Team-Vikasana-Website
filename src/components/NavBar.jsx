@@ -32,9 +32,15 @@ const NavBar = () => {
                 <a href="#contact">
                     <p>Contact</p>
                 </a>
-                <button className="bg-white rounded-xl px-6 py-2 hover:opacity-95 active:opacity-85 transition-opacity duration-300">
+                {/* Updated Register button to be a link */}
+                <a
+                  href="https://dashboard-vikasana.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white rounded-xl px-6 py-2 hover:opacity-95 active:opacity-85 transition-opacity duration-300"
+                >
                     <span className="text-black font-extrabold">Register</span>
-                </button>
+                </a>
             </nav>
             <button
                 className="sm:hidden"
